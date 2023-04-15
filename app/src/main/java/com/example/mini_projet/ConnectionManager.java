@@ -20,13 +20,13 @@ public class ConnectionManager {
         return false ;
     }
 
-    public Mobile getConnectedDevice(){
-        return new Mobile();
-    }
 
 
 
     public boolean disconnect(){
         return  false;
     }
+
+
+
 }

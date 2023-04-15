@@ -4,34 +4,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MobileNetwork {
+
+
+
 //+addDevice(device: Mobile):bool
 //	+removeDevice(device: Mobile): void
 //	+getDevices(): List<Mobile>
 //	+getConnectedDevices(): List<Mobile>
 //	+findBestConnection():Mobile
-    List<Mobile> devices ;
-    public boolean addDevice(Mobile device ){
+
+
+    List<Mobile> networks ;
+
+    public List<Mobile> getNetworks() {
+        return networks;
+    }
+    public boolean addNetwork(Mobile net ){
+        return false;
+    }
+
+    public boolean removeNetwork(Mobile net ){
         return false ;
     }
 
-    public boolean removeDevice(Mobile device ){
-        return false ;
-    }
 
-    public List<Mobile> getDevices() {
-        return devices;
-    }
 
-    public void setDevices(List<Mobile> devices) {
-        this.devices = devices;
+    public void setNetworks(List<Mobile> devices) {
+        this.networks = devices;
     }
 
     public List<Mobile> getConnectedDevices(){
-        return devices;
+        return networks;
     }
 
-    public Mobile findBestConnection(){
-        return new Mobile();
+    //must return devcie
+    public void findBestConnection(){
+
     }
 
 
