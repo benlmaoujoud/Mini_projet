@@ -21,10 +21,8 @@ public class Brodcasting extends BroadcastReceiver {
     * logic : khass broadcast to every device connected to wifi
     * objet string
     *  */
-
     private WifiP2pManager mManager ;
     private WifiP2pManager.Channel mChannel;
-
     private MainActivity mActivity;
 
     public Brodcasting(WifiP2pManager mManager, WifiP2pManager.Channel mChannel, MainActivity mActivity) {
