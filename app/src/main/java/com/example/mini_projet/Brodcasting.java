@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 public class Brodcasting extends BroadcastReceiver {
 
-
     /*
     * logic : khass broadcast to every device connected to wifi
     * objet string
@@ -53,8 +52,7 @@ public class Brodcasting extends BroadcastReceiver {
             }
 
         } else if (WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION.equals(action)) {
-            if(mManager!=null){
-
+            if(mManager!=null){ 
                 NetworkInfo networkInfo = intent.getParcelableExtra(WifiP2pManager.EXTRA_NETWORK_INFO);
                 if(networkInfo.isConnected()){
                     mManager.requestConnectionInfo(mChannel,mActivity.connectionInfoListener);
@@ -62,8 +60,6 @@ public class Brodcasting extends BroadcastReceiver {
                     mActivity.myTextView.setText("Device disconnect");
                 }
             }
-            // Connection state changed! We should probably do something about
-            // that.
 
         } else if (WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION.equals(action)) {
 
@@ -71,24 +67,3 @@ public class Brodcasting extends BroadcastReceiver {
         }
     }
 }
-
-/*
- @Override
-    public void onReceive(Context context,Intent intent) {
-        Log.d(TAG, "onReceive() called");
-        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
-        if (wifiManager != null && wifiManager.isWifiEnabled()) {
-           String s="ahmed";
-            Intent broadcastIntent = new Intent();
-            broadcastIntent.setAction("com.example.broadcast.OBJECT_SENT");
-            broadcastIntent.putExtra("QOS",s);
-            context.sendBroadcast(broadcastIntent);
-            Log.d(TAG, "Broadcast sent successfully.");
-
-
-
-        } else {
-            Log.e(TAG, "Wi-Fi is not enabled.");
-        }
-    }
- */

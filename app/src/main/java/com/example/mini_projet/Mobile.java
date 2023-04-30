@@ -78,16 +78,6 @@ public class Mobile extends Activity {
     }
 
 
-    public boolean isConnected(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        return activeNetwork != null && activeNetwork.isConnected();
-    }
-
-
-
-
-
 
     public boolean connectTo(Mobile device){
         return false ;
